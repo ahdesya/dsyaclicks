@@ -1,0 +1,5 @@
+# dsyaclicks.com robots.txt
+
+User-agent: *
+Crawl-delay: 30
+Allow: /
