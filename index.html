@@ -1,76 +1,565 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<meta name="viewport" content="width=device-width,user-scalable=no">
-	    <title>| #DsyaClicks |</title>
-	    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Kaushan+Script|Montserrat' rel='stylesheet' type='text/css'>
-	    <link rel="stylesheet" type="text/css" href="css/style.css">
-	    <script type="text/javascript" src="js/modernizr.js"></script>
-	</head>
+<head>
 
-	<body>
-		<header>
- 			<img src="images/thailand.JPG" alt="Thailand">
- 			<div class="name fancy-font">
- 				DsyaClicks
- 			</div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
- 			<div class="titles">
- 				<h1>Hello! <span>I'm Ahdesya</span></h1>
- 				<h2>"Every artist was first an amateur." Thus, explains me.</h2>
- 			</div>
+    <title>#DsyaClicks</title>
 
- 			<div class="social">
- 				<a class="facebook" href="https://www.facebook.com/ahdesyaharindran">Facebook</a>
- 				<a class="twitter" href="https://twitter.com/AhdesyaH">Twitter</a>
- 				<a class="instagram" href="https://instagram.com/dsyaclicks">Instagram</a>
- 			</div>
-	    </header>
-	    <section class="instagram-wrap">
-	 		<div class="container">
-		        <div class="row">
-		            <div class="col-xs-12">
-		                <div class="instagram-content">
-		                    <h3>Latest Photos</h3>
-		                    <div class="row photos-wrap">
-		                    	<!-- Instafeed target div -->
-									<div id="instafeed">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
-									</div>
-                        	</div>
-		                </div>
-		            </div>
-		        </div>
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
-		        <div class="row">
-		        	<div class="col-xs-12">
-		        		<div class="instagram-content">
-		        			<h3><a href="https://www.flickr.com/photos/135305566@N06/">View more photos</a>
-		        		</div>
-		        	</div>
-		        <div>
-		    </div>
-	    </section>
-	    <footer>
-	 		<div class="container">
-			    <div class="row">
-			        <div class="col-xs-12">
-			            <h4>Get in touch</h4>
-			            <p class="about-text">Don't hesitate to get in touch with me.</p>
-			            <a class="contact-now-btn" href="mailto: dsyaclicks@hotmail.com">Contact Now</a>
-			        </div>
-			    </div>
-			</div>
-	    </footer>
-	    <section class="footer-bottom">
-	 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<script type="text/javascript" src="js/bootstrap.js"></script>
-			<script type="text/javascript" src="js/instafeed.min.js"></script>
-			<script type="text/javascript" src="js/app.js"></script>
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
 
-			2015 &copy; DsyaClicks. All rights reserved.
-	    </section>
-	</body>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Use Iconifyer to generate all the favicons and touch icons you need: http://iconifier.net -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">#DsyaClicks</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content overlay">
+            <div class="header-content-inner">
+
+                <h1>DsyaClicks</h1>
+                <hr>
+                
+                <img src="img/dsyaclicks2.png">  
+
+                <hr>
+                
+                <h3>Every artist was first an amateur.<br> Thus, explains me.</h3>
+                <hr>
+                
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">About DsyaClicks</h2>
+                    <hr class="light">
+
+                  
+                    <img src="img/ahdesya.jpg" class="profilepicture img-circle">  
+
+                    <hr class="light">
+
+                    <h3 class="text-faded">Web Developer by Weekday, Photographer by Weekend.</h3>
+
+                    <hr class="light">
+                
+                    <p class="text-faded">My name is Ahdesya Harindran and I am a programmer by profession who specializes in front-end web applications, building dynamic and beautiful web pages. Photography has been my passion and hobby for at least a half a decade now, and I've been loving every minute of it. I've been exposed to different types of photography throughout the years, but some of my specialties include portrait, product and landscape photography.</p>
+
+                    <p class="text-faded">I started DsyaClicks to showcase my love for photography. Check out some of the photos below to see what I've been up to.</p>
+
+                    <a href="#portfolio" class="page-scroll btn btn-default btn-xl sr-button">View Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L1.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L1.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Budapest, Hungary
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L2.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L2.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Munich, Germany
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L3.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L3.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Putrajaya, Malaysia
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Sabah, Malaysia
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L5.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Marina Bay Sands, Singapore
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L6.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Zurich, Switzerland
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L7.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L7.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Vienna, Austria
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L8.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L8.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Chiang Mai, Thailand
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L9.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L9.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Chiang Mai, Thailand
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L10.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L10.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Chiang Mai, Thailand
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L11.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L11.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Bukit Tinggi, Malaysia
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/L12.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/L12.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Travel
+                                </div>
+                                <div class="project-name">
+                                    Lucern, Switzerland
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                 <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P1.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P1.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    A
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P2.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P2.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                   A
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P3.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P3.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    P
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    J
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P5.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                   T
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+              
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P7.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P7.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    S
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P8.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P8.jpg" class="img-responsive fill" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    S
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/P6.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/P6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    People
+                                </div>
+                                <div class="project-name">
+                                    S
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/C1.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/C1.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Automotive
+                                </div>
+                                <div class="project-name">
+                                    Volkswagen
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/C2.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/C2.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Automotive
+                                </div>
+                                <div class="project-name">
+                                    Mitsubishi
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/C3.JPG" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/C3.JPG" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Automotive
+                                </div>
+                                <div class="project-name">
+                                    Lexus
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/C4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/C4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Automotive
+                                </div>
+                                <div class="project-name">
+                                    Volvo
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            </div>
+
+                
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            
+        </div>
+    </aside>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <a href="https://twitter.com/AhdesyaH" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </div>
+
+                <div class="col-lg-3  text-center">
+                    <a href="https://www.facebook.com/ahdesyaharindran" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                </div>
+                
+                <div class="col-lg-3  text-center">
+                    <a href="https://www.instagram.com/dsyaclicks/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                </div>
+                
+                <div class="col-lg-3 text-center">
+                    <a href="mailto:dsyaclicks@hotmail.com" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> dsyaclicks@hotmail.com</a>
+<!-- 
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:dsyaclicks@hotmail.com">dsyaclicks@hotmail.com</a></p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/scrollreveal.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+</body>
 
 </html>
