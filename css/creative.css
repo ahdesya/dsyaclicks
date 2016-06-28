@@ -56,6 +56,7 @@ p {
 section {
   padding: 100px 0;
 }
+
 aside {
   padding: 50px 0;
 }
@@ -141,6 +142,7 @@ aside {
     color: #bdb7b7;
   }
 }
+
 header {
   position: relative;
   width: 100%;
@@ -153,6 +155,15 @@ header {
   background-image: url('../img/home.JPG');
   text-align: center;
   color: white;
+}
+
+
+.logo{
+  max-height: 245px;
+  max-width: 245px;
+  height: auto;
+  width: auto;
+  padding-top: 10px;
 }
 
 .profilepicture{
